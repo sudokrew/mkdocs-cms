@@ -1,0 +1,57 @@
+{
+  "name": "mkdocs-cms",
+  "version": "1.0.0",
+  "description": "A cms solution with static site generating capabilities",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerekAhn/mkdocs-cms.git"
+  },
+  "keywords": [
+    "cms",
+    "mkdocs",
+    "static-site",
+    "generator"
+  ],
+  "author": {
+    "name": "Derek Ahn",
+    "email": "derek@sudokrew.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DerekAhn/mkdocs-cms/issues"
+  },
+  "homepage": "https://github.com/DerekAhn/mkdocs-cms#readme",
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "body-parser": "^1.13.3",
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "express-hbs": "^0.8.4",
+    "eyes": "^0.1.8",
+    "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1",
+    "morgan": "^1.6.1",
+    "read-file": "^0.2.0",
+    "remove": "^0.1.5",
+    "yamljs": "^0.2.3",
+    "zip-dir": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.3.0",
+    "jshint-stylish": "^2.0.1"
+  }
+}
