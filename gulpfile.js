@@ -50,7 +50,6 @@ gulp.task('js', function() {
 
 gulp.task('watch', function() {
   livereload.listen();
-  Watch(custom);
   Watch(app);
 
   gulp.watch(['./public/**/*', './templates/**/*']).on('change', function(file) {

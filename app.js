@@ -3,7 +3,7 @@ var express    = require('express');
 var app        = express();
 
 require('dotenv').load();
-require('helpers');
+require('./helpers/init');
 
 /**
  * View Engine
@@ -33,9 +33,9 @@ app.use(require('morgan')('dev'));
 /**
  * Routes
  */
-app.use('/', require('api'));
-app.use('*', require('middleware').err400);
-app.use(require('middleware').err500);
+app.use('/', require('./api'));
+app.use('*', require('./lib/middleware').err400);
+app.use(require('./lib/middleware').err500);
 
 
 /**
@@ -50,5 +50,5 @@ require('child_process').exec(env.MKDOCS_SERVE, function(err, out) {
  * Runs Node Server
  */
 app.listen(Number(env.SERVER_PORT), function() {
-  console.log('Listening on port %d', this.address().port());
+  console.log('Listening on port %d', this.address().port);
 });
