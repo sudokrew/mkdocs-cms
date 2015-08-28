@@ -4,6 +4,10 @@ _.mixin({
     return _.snakeCase( name.toLowerCase(name.substr(0, name.lastIndexOf('.')) || name)  );
   },
 
+  rmSnake: function(name) {
+    return name.toLowerCase().split('_').join('');
+  },
+
   removeExt: function(name) {
     return name.replace(/\.[^/.]+$/, "");
   },
