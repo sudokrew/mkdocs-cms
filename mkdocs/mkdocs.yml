@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: MkDocs CMS
+pages:
+  - Home: index.md
+  - About: about.md
+  theme: readthedocs
