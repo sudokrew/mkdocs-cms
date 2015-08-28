@@ -61,7 +61,7 @@ gulp.task('watch', function() {
 gulp.task('serve', function() {
   nodemon({ script: 'app.js', ext: 'js', watch: ['./app.js', './api.js', './lib/*.js', './helpers/*.js'] })
   .on('restart', function() {
-    console.log('Restarted! ' + require('moment')(new Date()).calendar());
+    console.log('Restarted! ' + new Date());
   })
 });
 

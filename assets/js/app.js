@@ -1,39 +1,7 @@
 $(function() {
-  $('.editor').trumbowyg();
   $('.sortable').sortable();
   $('#side-menu').metisMenu();
   $('#accordion').disableSelection();
-  $('.switch').bootstrapSwitch({ size: 'mini' });
-
-
-  $('.clone-btn').click(function() {
-    var id    = $(this).attr('data');
-    var newId = Math.floor(Math.random() * 1000);
-    var input = '<input id="switch' + newId + '" type="checkbox" class="switch" data="#panel' + newId + '">';
-
-    $('#panel'+id).clone(true).appendTo('#accordion');
-
-    $('.tab-module').last().find('.kill-switch').empty().append(input);
-    $('.tab-module').last().attr('id', 'panel' + newId);
-    $('.tab-module').last().find('.panel-collapse').attr('id', 'collapse'+newId);
-    $('.tab-module').last().find('.collapse-toggle').attr('href','#collapse'+ newId).attr('aria-controls', '#collapse'+ newId);
-    $('#switch'+newId).bootstrapSwitch({ size: 'mini' });
-    $('#switch'+newId).on('switchChange.bootstrapSwitch', function(e, state) {
-      var module = $('#panel'+newId);
-      state? $(module).removeClass('remove-module') : $(module).addClass('remove-module');
-    });
-
-  });
-
-  $('.switch').on('switchChange.bootstrapSwitch', function(e, state) {
-    var module = $(this).attr('data');
-
-    state? $(module).removeClass('remove-module') : $(module).addClass('remove-module');
-  });
-
-  $('#create-form').submit(function(e) {
-    $('.remove-module').remove();
-  });
 
 
   $('ol.nested-sortable').nestedSortable({
@@ -49,7 +17,7 @@ $(function() {
 
   $('#order-form').submit(function(e) {
     e.preventDefault();
-    
+
     var arr = [];
 
     $('.section').each(function() {

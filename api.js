@@ -63,14 +63,7 @@ router.route('/static-site')
 
 router.route('/page')
   .get(function(req, res) {
-    modules.get()
-    .then(modules.jsonify)
-    .then(function(partials) {
-      res.render('page', { templates: partials });
-    })
-    .catch(function(err) {
-      res.render('error', { err: err })
-    });
+    res.render('page');
   })
   .post(function(req, res) {
     req.body.all = res.locals;
