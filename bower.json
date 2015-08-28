@@ -27,8 +27,6 @@
     "prettify": "*",
     "components-font-awesome": "~4.4.0",
     "jquery-ui": "~1.11.4",
-    "bootstrap-switch": "~3.3.2",
-    "bootstrap-select": "~1.7.3",
     "nestedSortable": "~1.3.4"
   }
 }
