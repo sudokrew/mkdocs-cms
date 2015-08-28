@@ -1,4 +1,4 @@
-var router = require('express').Router();
+var router     = require('express').Router();
 var config     = require('./lib/config_utils');
 var middleware = require('./lib/middleware');
 var file       = require('./lib/file_utils');
