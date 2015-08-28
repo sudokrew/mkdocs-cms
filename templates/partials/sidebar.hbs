@@ -1,0 +1,53 @@
+<aside class="navbar-default sidebar">
+  <div class="sidebar-nav navbar-collapse">
+    <ul class="nav in" id="side-menu">
+      <li><a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+
+      <li><a href="/section"><i class="fa fa-plus fa-fw"></i> Create Section</a></li>
+
+      <li><a href="/page"><i class="fa fa-edit fa-fw"></i> Create Page</a></li>
+
+      <li>
+        <a href="#"><i class="fa fa-wrench fa-fw"></i> Edit Page<span class="fa arrow"></span></a>
+          {{#each pages}}
+            <ul class="nav nav-second-level collapse">
+              {{#each this}}
+                <li>
+                  <a href="#">{{@key}}<span class="fa arrow"></span></a>
+                  <ul class="nav nav-second-level collapse"> 
+                    {{#each this}}
+                      {{#each this}}
+                        {{#isArray this}}
+                          <li>
+                            <a href="#">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;{{@key}}<span class="fa arrow"></span></a>
+                            {{#each this}}
+                              {{#each this}}
+                                <ul class="nav nav-second-level collapse">
+                                  <li><a href="/edit/{{formatUrl @key}}">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;{{@key}}</a></li>
+                                </ul>
+                              {{/each}}
+                            {{/each}}
+                          </li>
+                        {{else}}
+                          <li><a href="/edit/{{formatUrl @key}}">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;{{@key}}</a></li>
+                        {{/isArray}}
+                      {{/each}}
+                    {{/each}}
+                  </ul>
+                </li>
+              {{/each}}
+            </ul>
+          {{/each}}
+      </li>
+
+      <li>
+        <a href="/modules"><i class="fa fa-codepen fa-fw"></i> Modules</a>
+      </li>
+
+      <li>
+        <a href="/order"><i class="fa fa-sitemap fa-fw"></i> Arrange Order</a>
+      </li>
+    
+    </ul>
+  </div>
+</aside>
