@@ -3,8 +3,6 @@
     <ul class="nav in" id="side-menu">
       <li><a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
 
-      <li><a href="/section"><i class="fa fa-plus fa-fw"></i> Create Section</a></li>
-
       <li><a href="/page"><i class="fa fa-edit fa-fw"></i> Create Page</a></li>
 
       <li>
@@ -14,7 +12,7 @@
               {{#each this}}
                 <li>
                   <a href="#">{{@key}}<span class="fa arrow"></span></a>
-                  <ul class="nav nav-second-level collapse"> 
+                  <ul class="nav nav-second-level collapse">
                     {{#each this}}
                       {{#each this}}
                         {{#isArray this}}
@@ -41,13 +39,9 @@
       </li>
 
       <li>
-        <a href="/modules"><i class="fa fa-codepen fa-fw"></i> Modules</a>
-      </li>
-
-      <li>
         <a href="/order"><i class="fa fa-sitemap fa-fw"></i> Arrange Order</a>
       </li>
-    
+
     </ul>
   </div>
 </aside>

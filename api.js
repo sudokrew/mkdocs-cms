@@ -31,6 +31,7 @@ router.route('/dashboard')
     });
   });
 
+
 router.route('/version')
   .post(function(req, res) {
     var configs = _.onlyConfig(res.locals);
@@ -53,26 +54,6 @@ router.route('/static-site')
     .then(function(buffer) {
       res.writeHead(200, { 'Content-Type': 'application/zip' });
       res.end(buffer);
-    })
-    .catch(function(err) {
-      res.render('error', { err: err });
-    });
-  });
-
-
-router.route('/section')
-  .get(function(req, res) {
-    res.render('section');
-  })
-  .post(function(req, res) {
-    req.body.all = res.locals;
-
-    file.validate(req.body)
-    .then(file.mkdir)
-    .then(config.newSection)
-    .then(config.set)
-    .then(function() {
-      res.redirect('/page')
     })
     .catch(function(err) {
       res.render('error', { err: err });
@@ -157,19 +138,6 @@ router.route('/delete/:page')
     })
     .catch(function(err) {
       res.render('error', { err: err });
-    });
-  });
-
-
-router.route('/modules')
-  .get(function(req, res) {
-    modules.get()
-    .then(modules.jsonify)
-    .then(function(partials) {
-      res.render('modules', { templates: partials })
-    })
-    .catch(function(err) {
-      res.render('error', { err: err })
     });
   });
 
