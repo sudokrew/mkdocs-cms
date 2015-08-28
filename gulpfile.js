@@ -9,10 +9,6 @@ var imagemin   = require('gulp-imagemin');
 var livereload = require('gulp-livereload');
 var prefix     = require('gulp-autoprefixer');
 
-var custom = {
-  src: './theme_assets/',
-  dest: './mkdocs/custom_theme/'
-};
 
 var app = {
   src: './assets/',
@@ -20,34 +16,22 @@ var app = {
 };
 
 gulp.task('sass', function() {
-  Sass(custom);
   Sass(app);
 });
 
 
 gulp.task('img', function () {
-  Img(custom);
   Img(app);
 });
 
 
 gulp.task('fonts', function() {
-  Fonts(custom);
   Fonts(app);
 });
 
 
-gulp.task('js', function() { 
-  Js(custom);
+gulp.task('js', function() {
   Js(app);
-
-  gulp
-  .src([
-    './bower_components/jquery/dist/jquery.js',
-    './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
-  ])
-  .pipe(uglify())
-  .pipe(gulp.dest(custom.dest + 'js/libs'));
 
   gulp
   .src([
@@ -55,10 +39,7 @@ gulp.task('js', function() {
     './bower_components/jquery-ui/jquery-ui.js',
     './bower_components/jquery-ui/ui/sortable.js',
     './bower_components/metisMenu/dist/metisMenu.js',
-    './bower_components/trumbowyg/dist/trumbowyg.js',
     './bower_components/nestedSortable/jquery.ui.nestedSortable.js',
-    './bower_components/bootstrap-switch/dist/js/bootstrap-switch.js',
-    './bower_components/bootstrap-select/dist/js/bootstrap-select.js',
     './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     './bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js'
   ])
@@ -71,7 +52,7 @@ gulp.task('watch', function() {
   livereload.listen();
   Watch(custom);
   Watch(app);
-  
+
   gulp.watch(['./public/**/*', './templates/**/*']).on('change', function(file) {
     livereload.changed(file.path);
   });
