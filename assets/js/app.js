@@ -1,7 +1,5 @@
 $(function() {
-  $('.sortable').sortable();
   $('#side-menu').metisMenu();
-  $('#accordion').disableSelection();
 
 
   $('ol.nested-sortable').nestedSortable({
@@ -92,3 +90,13 @@ $(function() {
     element.addClass('active');
   }
 });
+
+new SimpleMDE({
+  element: document.getElementById('editor'),
+  spellChecker: false,
+  autosave: {
+    enabled: true,
+    unique_id: 'editor',
+  }
+});
+
