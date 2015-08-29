@@ -1,7 +1,7 @@
 <section class="edit-view">
   <div class="list-group">
     <form id="form" action="/edit/{{page}}" method="POST" role="form" data-abide="ajax">
-      <div id="{{page}}" class="editor">{{{html}}}</div>
+      <textarea id="{{page}}" class="editor">{{{html}}}</textarea>
       <br>
       <button class="btn btn-default btn-block"  type="submit">Save Changes</button>
     </form>

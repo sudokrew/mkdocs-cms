@@ -1,6 +1,22 @@
 $(function() {
   $('#side-menu').metisMenu();
 
+  new SimpleMDE({
+    element: $('#home')[0],
+    spellchecker: true,
+    lineWrapping: true,
+    indentWithTabs: true,
+    tabSize: 4,
+    autosave: {
+      enabled: true,
+      unique_id: $('.editor').attr('id'),
+      delay: 10000
+    }
+  });
+
+  $('.fa-arrows-alt').click( function() {
+    $('#navigation').toggle();
+  });
 
   $('ol.nested-sortable').nestedSortable({
     handle: 'div',
@@ -90,13 +106,3 @@ $(function() {
     element.addClass('active');
   }
 });
-
-new SimpleMDE({
-  element: document.getElementById('editor'),
-  spellChecker: false,
-  autosave: {
-    enabled: true,
-    unique_id: 'editor',
-  }
-});
-
