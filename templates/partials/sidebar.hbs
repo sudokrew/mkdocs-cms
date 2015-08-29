@@ -7,13 +7,13 @@
 
       <li>
         <a href="#"><i class="fa fa-wrench fa-fw"></i> Edit Page<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
           {{#each pages}}
-            <ul class="nav nav-second-level collapse">
-              {{#each this}}
-                <li><a href="/edit/{{formatUrl @key}}">{{@key}}</a></li>
-              {{/each}}
-            </ul>
+            {{#each this}}
+              <li><a href="/edit/{{formatUrl @key}}">{{@key}}</a></li>
+            {{/each}}
           {{/each}}
+        </ul>
       </li>
 
       <li>

@@ -7,6 +7,7 @@ $(function() {
     lineWrapping: true,
     indentWithTabs: true,
     tabSize: 4,
+    initialValue: $('.editor-value').attr('data'),
     autosave: {
       enabled: true,
       unique_id: $('.editor').attr('id'),
