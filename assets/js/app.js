@@ -1,18 +1,20 @@
 $(function() {
   $('#side-menu').metisMenu();
 
-  new SimpleMDE({
-    element: $('#home')[0],
-    spellchecker: true,
-    lineWrapping: true,
-    indentWithTabs: true,
-    tabSize: 4,
-    initialValue: $('.editor-value').attr('data'),
-    autosave: {
-      enabled: true,
-      unique_id: $('.editor').attr('id'),
-      delay: 10000
-    }
+  $('.editor').each( function() {
+    new SimpleMDE({
+      element: this,
+      spellchecker: true,
+      lineWrapping: true,
+      indentWithTabs: true,
+      tabSize: 4,
+      initialValue: $('.editor-value').attr('data'),
+      autosave: {
+        enabled: true,
+        unique_id: $(this).attr('id'),
+        delay: 10000
+      }
+    });
   });
 
   $('.fa-arrows-alt').click( function() {
