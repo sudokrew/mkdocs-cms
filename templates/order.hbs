@@ -1,56 +1,23 @@
 <section class="order-view">
-  
+
   <div id="order-response" class="alert alert-info text-center" role="alert" hidden></div>
 
   <form id="order-form" action="/order" role="form" data-abide="ajax">
-    <ol class="list-group nested-sortable">
+
+
+    <div class="list-group">
       {{#each pages}}
         {{#each this}}
-          <li>
-            <div>
-              <h4><i class="fa fa-folder-open fa-fw"></i> {{@key}}</h4>
-            </div>
-
-            <ol data-section="{{@key}}" class="section">
-              {{#each this}}
-                {{#each this}}
-                    {{#isArray this}}
-                      <ol>
-                        <li class="{{@../../key}} sub-section" data-sub-section="{{@key}}">
-                          <div>
-                            <h5><i class="fa fa-folder-open-o fa-fw"></i> {{@key}}</h5>
-                          </div>
-                          {{#each this}}
-                            {{#each this}}
-                              <ol>
-                                <li class="{{@../../key}} page" page="{{@key}}" path="{{this}}">
-                                  <div path="{{this}}">
-                                    <a class="list-group-item get" href="#">
-                                      <i class="fa fa-arrows-v fa-fw"></i> {{@key}}<span class="pull-right text-muted small"><em>{{removeFileExt this}}</em> <i class="fa fa-file-o fa-fw"></i></span>
-                                    </a>
-                                  </div>
-                                </li>
-                              </ol>
-                            {{/each}}
-                          {{/each}}
-                        </li>
-                      </ol>
-                    {{else}}
-                      <li class="{{@../../key}} page" data-path="{{this}}" data-page="{{@key}}">
-                        <div>
-                          <a class="list-group-item get" href="#">
-                            <i class="fa fa-arrows-v fa-fw"></i> {{@key}}<span class="pull-right text-muted small"><em>{{removeFileExt this}}</em> <i class="fa fa-file fa-fw"></i></span>
-                          </a>
-                        </div>
-                      </li>
-                    {{/isArray}}
-                {{/each}}
-              {{/each}}
-            </ol>
-          </li>
+          <div class="panel-body">
+            <a class="list-group-item" href="#">
+              <i class="fa fa-arrows-v fa-fw"></i> {{@key}}<span class="pull-right text-muted small"><em>4 minutes ago</em></span>
+            </a>
+          </div>
         {{/each}}
       {{/each}}
-    </ol>
-    <button class="btn btn-default btn-block">Save Changes</button>
+      </div>
+      <button class="btn btn-default btn-block">Save Changes</button>
+    </div>
+
   </form>
 </section>

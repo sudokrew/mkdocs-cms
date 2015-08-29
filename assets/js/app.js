@@ -21,17 +21,6 @@ $(function() {
     $('#navigation').toggle();
   });
 
-  $('ol.nested-sortable').nestedSortable({
-    handle: 'div',
-    items: 'li',
-    tabSize: 15,
-    tolerance: 'pointer',
-    toleranceElement: '> div',
-    protectRoot: true,
-    maxLevels: 4,
-    isTree: true
-  });
-
   $('#order-form').submit(function(e) {
     e.preventDefault();
 

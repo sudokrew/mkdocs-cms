@@ -61,7 +61,6 @@ gulp.task('js', function() {
     './bower_components/jquery-ui/jquery-ui.js',
     './bower_components/jquery-ui/ui/sortable.js',
     './bower_components/metisMenu/dist/metisMenu.js',
-    './bower_components/nestedSortable/jquery.ui.nestedSortable.js',
     './bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
     './bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js'
   ])
