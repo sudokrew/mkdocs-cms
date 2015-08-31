@@ -5,14 +5,13 @@
   <form id="order-form" action="/order" role="form" data-abide="ajax">
 
 
-    <div class="list-group">
+    <div class="sortable">
       {{#each pages}}
         {{#each this}}
-          <div class="panel-body">
-            <a class="list-group-item" href="#">
+            <a class="panel-body" href="#">
               <i class="fa fa-arrows-v fa-fw"></i> {{@key}}<span class="pull-right text-muted small"><em>4 minutes ago</em></span>
             </a>
-          </div>
+            <br>
         {{/each}}
       {{/each}}
       </div>
