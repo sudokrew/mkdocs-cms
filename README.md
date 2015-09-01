@@ -1,5 +1,7 @@
 # MkDocs-CMS
 
+Is a simple cms solution for MkdDocs wrapped in node.
+
 ## Project Set Up
 
   * Node (v 0.12.7)
