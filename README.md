@@ -2,6 +2,9 @@
 
 Is a simple cms solution for MkDocs wrapped in node.
 
+* Markdown version (master)
+* Html version (html)
+
 ## Project Set Up
 
   * Node (v 0.12.7)
