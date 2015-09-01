@@ -1,5 +1,6 @@
 $(function() {
   $('#side-menu').metisMenu();
+  $( "#sortable"  ).sortable();
 
   $('.editor').each( function() {
     new SimpleMDE({

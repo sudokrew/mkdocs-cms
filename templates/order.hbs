@@ -5,18 +5,21 @@
   <form id="order-form" action="/order" role="form" data-abide="ajax">
 
 
-    <div class="sortable">
-      {{#each pages}}
-        {{#each this}}
-            <a class="panel-body" href="#">
-              <i class="fa fa-arrows-v fa-fw"></i> {{@key}}<span class="pull-right text-muted small"><em>4 minutes ago</em></span>
+   <div class="panel-body">
+      <div id="sortable" class="list-group">
+
+        {{#each pages}}
+          {{#each this}}
+            <a class="list-group-item" href="#">
+              <i class="fa fa-arrows-v fa-fw"></i> {{@key}}<span class="pull-right text-muted small"><em>{{@key}}</em></span>
             </a>
-            <br>
+          {{/each}}
         {{/each}}
-      {{/each}}
+
       </div>
-      <button class="btn btn-default btn-block">Save Changes</button>
+      <a class="btn btn-default btn-block" href="#">Save Changes</a>
     </div>
+
 
   </form>
 </section>
