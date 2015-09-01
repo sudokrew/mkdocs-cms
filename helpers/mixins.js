@@ -36,17 +36,9 @@ _.mixin({
     return _.isUndefined(obj.content)? _.startCase(obj.name) : _.isArray(obj.content)? obj.content.join('\n') : obj.content;
   },
 
-  formatPath: function(obj, isNew) {
-    var base = isNew? env.MKDOCS + obj.path : obj.path;
-    return _.endsWith(obj.path, '.md')? base : base+'/' + this.snakeify(obj.name) +'.md';
+  formatPath: function(name) {
+    return env.MKDOCS + _.snakeCase(name.toLowerCase()) +'.md';
   },
-
-  isTertiary: function(path) {
-    path = _.remove(path.split('/'), function(str) {
-      return !_.endsWith(str, '.md');
-    });
-    return path.length > 1;
-  }
 
 
 });
