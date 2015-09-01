@@ -1,6 +1,6 @@
 # MkDocs-CMS
 
-Is a simple cms solution for MkdDocs wrapped in node.
+Is a simple cms solution for MkDocs wrapped in node.
 
 ## Project Set Up
 
