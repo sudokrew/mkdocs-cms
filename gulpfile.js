@@ -15,7 +15,6 @@ var app = {
   dest: './public/'
 };
 
-
 gulp.task('sass', function() {
   gulp
   .src(app.src +'sass/main.scss')
