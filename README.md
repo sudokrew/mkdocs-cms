@@ -30,4 +30,5 @@ Is a simple cms solution for MkDocs wrapped in node.
 
 ## Further Reading
   * [MKDocs](http://www.mkdocs.org/user-guide/configuration/) is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+
   * [SimpleMDE](http://nextstepwebs.github.io/simplemde-markdown-editor/) is a simple, embeddable, and beautiful markdown editor.
