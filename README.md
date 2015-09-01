@@ -14,6 +14,8 @@
 
 ### Run development processes
 
+  * Task runner with gulp.js
+
   ```bash
     $ gulp
   ```
@@ -26,4 +28,4 @@
 
 ## Further Reading
   * [mkdocs](http://www.mkdocs.org/user-guide/configuration/)
-  * [nestedSortable](https://github.com/mjsarfatti/nestedSortable)
+  * [simpleMDE](http://nextstepwebs.github.io/simplemde-markdown-editor/)
