@@ -36,9 +36,8 @@ _.mixin({
     return _.isUndefined(obj.content)? _.startCase(obj.name) : _.isArray(obj.content)? obj.content.join('\n') : obj.content;
   },
 
-  formatPath: function(name) {
-    return env.MKDOCS + _.snakeCase(name.toLowerCase()) +'.md';
-  },
-
+  formatPath: function(name, created) {
+    return (created? env.MKDOCS : '')+ _.snakeCase(name.toLowerCase()) +'.md';
+  }
 
 });
