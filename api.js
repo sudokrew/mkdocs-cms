@@ -2,14 +2,12 @@ var router     = require('express').Router();
 var config     = require('./lib/config_utils');
 var middleware = require('./lib/middleware');
 var file       = require('./lib/file_utils');
-var modules    = require('./lib/modules');
-
 
 router.use(middleware.configs);
 router.use(middleware.icons);
 
 router.route('/')
-  .get(function(req, res) {
+ .get(function(req, res) {
     res.redirect('/dashboard');
   });
 
