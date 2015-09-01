@@ -23,39 +23,19 @@ $(function() {
   });
 
   $('#order-form').submit(function(e) {
+    var pages = [];
     e.preventDefault();
 
-    var arr = [];
-
-    $('.section').each(function() {
-      var obj = {};
-      var section = $(this).attr('data-section');
-      obj[section] = [];
-
-      $('.' + section.split(' ').join('.') + '.page').each(function() {
-        var page = {};
-        page[$(this).attr('data-page')] = $(this).attr('data-path');
-        obj[section].push(page);
-      });
-
-      $('.' + section.split(' ').join('.') + '.sub-section').each(function() {
-        var sub = {};
-        var subSection = $(this).attr('data-sub-section');
-        sub[subSection] = [];
-
-        $('.' + subSection.split(' ').join('.') + '.page').each(function() {
-          var page = {};
-          page[$(this).attr('page')] = $(this).attr('path');
-          sub[subSection].push(page);
-        });
-
-        obj[section].push(sub);
-      });
-
-      arr.push(obj);
+    $('.list-group-item').each(function() {
+      var page = {};
+      page[$(this).attr('page')] = $(this).attr('path');
+      pages.push(page);
     });
 
-    $.post($(this).attr('action'), { pages: arr })
+    console.log(pages);
+
+
+    $.post($(this).attr('action'), { pages: pages })
       .done(function(response) {
         var elem = '#order-response';
 
@@ -66,7 +46,6 @@ $(function() {
           $(elem).fadeOut();
           $(elem).html('');
         }, 3000);
-
       });
   });
 
