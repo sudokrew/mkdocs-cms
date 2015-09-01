@@ -37,7 +37,7 @@ _.mixin({
   },
 
   formatPath: function(name, created) {
-    return (created? env.MKDOCS : '')+ _.snakeCase(name.toLowerCase()) +'.md';
+    return (created? env.MKDOCS : '')+ this.snakeify(name) +'.md';
   }
 
 });
