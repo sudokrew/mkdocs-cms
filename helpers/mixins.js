@@ -5,7 +5,7 @@ _.mixin({
   },
 
   rmSnake: function(name) {
-    return name.toLowerCase().split('_').join('');
+    return name.toLowerCase().split('_').join(' ');
   },
 
   removeExt: function(name) {
