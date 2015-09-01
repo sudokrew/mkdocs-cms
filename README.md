@@ -27,5 +27,5 @@
   ```
 
 ## Further Reading
-  * [mkdocs](http://www.mkdocs.org/user-guide/configuration/)
-  * [simpleMDE](http://nextstepwebs.github.io/simplemde-markdown-editor/)
+  * [mkdocs](http://www.mkdocs.org/user-guide/configuration/): MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+  * [simpleMDE](http://nextstepwebs.github.io/simplemde-markdown-editor/): SimpleMDE is a simple, embeddable, and beautiful markdown editor.
