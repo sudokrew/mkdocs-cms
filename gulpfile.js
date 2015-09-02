@@ -11,7 +11,7 @@ var livereload = require('gulp-livereload');
 var prefix     = require('gulp-autoprefixer');
 
 var app = {
-  src: './assets/',
+  src: './app/assets/',
   dest: './public/'
 };
 
@@ -46,17 +46,17 @@ gulp.task('fonts', function() {
 gulp.task('editor', function() {
   gulp
   .src([
-    './assets/simpleMDE/codemirror/codemirror.js',
-    './assets/simpleMDE/codemirror/continuelist.js',
-    './assets/simpleMDE/codemirror/fullscreen.js',
-    './assets/simpleMDE/codemirror/markdown.js',
-    './assets/simpleMDE/codemirror/overlay.js',
-    './assets/simpleMDE/codemirror/gfm.js',
-    './assets/simpleMDE/codemirror/xml.js',
-    './assets/simpleMDE/typo.js',
-    './assets/simpleMDE/spell-checker.js',
-    './assets/simpleMDE/marked.js',
-    './assets/simpleMDE/simplemde.js'
+    app.src +'simpleMDE/codemirror/codemirror.js',
+    app.src +'simpleMDE/codemirror/continuelist.js',
+    app.src +'simpleMDE/codemirror/fullscreen.js',
+    app.src +'simpleMDE/codemirror/markdown.js',
+    app.src +'simpleMDE/codemirror/overlay.js',
+    app.src +'simpleMDE/codemirror/gfm.js',
+    app.src +'simpleMDE/codemirror/xml.js',
+    app.src +'simpleMDE/typo.js',
+    app.src +'simpleMDE/spell-checker.js',
+    app.src +'simpleMDE/marked.js',
+    app.src +'simpleMDE/simplemde.js'
   ])
   .pipe(concat('simplemde.js'))
   .pipe(uglify())

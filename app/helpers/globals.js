@@ -8,6 +8,8 @@ var helpers = {
 
   YAML: require('yamljs'),
 
+  cwd: process.cwd(),
+
   env: process.env,
 
   _: lodash

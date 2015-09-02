@@ -1,10 +1,9 @@
 var router = require('express').Router();
-var file   = require('./lib/file_utils');
-var middle = require('./lib/middleware');
-var config = require('./lib/config_utils');
+var file   = require(cwd+env.FILE_UTILS);
+var config = require(cwd+env.CONFIG_UTILS);
 
-router.use(middle.configs);
-router.use(middle.icons);
+router.use(require(cwd+env.MIDDLEWARE).configs);
+router.use(require(cwd+env.MIDDLEWARE).icons);
 
 router.route('/')
  .get(function(req, res) {

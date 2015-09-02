@@ -3,22 +3,23 @@ var express    = require('express');
 var app        = express();
 
 require('dotenv').load();
-require('./helpers/init');
+require(process.env.HELPERS);
+
 
 /**
  * View Engine
  */
 app.engine('hbs', handlebars.express4({
-  defaultLayout: __dirname + '/templates/layout/default.hbs',
-  partialsDir: __dirname + '/templates/partials',
-  layoutDir: __dirname + '/templates/layout',
+  defaultLayout: __dirname + env.TEMPLATES +'/layout/default.hbs',
+  partialsDir: __dirname + env.TEMPLATES +'/partials',
+  layoutDir: __dirname + env.TEMPLATES +'/layout',
   extname: '.hbs'
 }));
 
 
 // Configure views path
 app.use(express.static(__dirname + '/public'));
-app.set('views', __dirname + '/templates');
+app.set('views', __dirname + env.TEMPLATES);
 app.set('view engine', 'hbs');
 
 
@@ -33,9 +34,9 @@ app.use(require('morgan')('dev'));
 /**
  * Routes
  */
-app.use('/', require('./api'));
-app.use('*', require('./lib/middleware').err400);
-app.use(require('./lib/middleware').err500);
+app.use('/', require(env.API));
+app.use('*', require(cwd+env.MIDDLEWARE).err400);
+app.use(require(cwd+env.MIDDLEWARE).err500);
 
 
 /**
