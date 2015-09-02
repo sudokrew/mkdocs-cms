@@ -1,7 +1,8 @@
 $(function() {
   $('#side-menu').metisMenu();
-  $( "#sortable"  ).sortable();
+  $('#sortable').sortable();
 
+  
   $('.editor').each( function() {
     new SimpleMDE({
       element: this,
@@ -18,10 +19,18 @@ $(function() {
     });
   });
 
+
+  /**
+   * Adjustment to allow simpleMDE to go full-screen.
+   */
   $('.fa-arrows-alt').click( function() {
     $('#navigation').toggle();
   });
 
+
+  /**
+   * Formats the pages to be ordered on submit
+   */
   $('#order-form').submit(function(e) {
     var pages = [];
     e.preventDefault();
@@ -31,9 +40,6 @@ $(function() {
       page[$(this).attr('page')] = $(this).attr('path');
       pages.push(page);
     });
-
-    console.log(pages);
-
 
     $.post($(this).attr('action'), { pages: pages })
       .done(function(response) {
@@ -49,9 +55,12 @@ $(function() {
       });
   });
 
-  //Loads the correct sidebar on window load,
-  //collapses the sidebar on window resize.
-  // Sets the min-height of #page-wrapper to window size
+
+  /**
+   * Loads the correct sidebar on window load,
+   * collapsing the sidebar on window resize.
+   * Setting the min-height of #page-wrapper to window size.
+   */
   $(window).bind('load resize', function() {
     topOffset = 50;
     width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
