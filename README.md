@@ -21,13 +21,13 @@ MkDocs recoomends for Windows users to install Python and pip with [Chocolatey](
 
 After you have Python & pip, you can use it to install the `mkdocs` package:
 ```bash
-  $ pip **install** mkdocs
+  $ pip install mkdocs
 ```
 
 If installed you should now have the `mkdocs` commands available.
 ```bash
-  $ mkdocs **help**
-  mkdocs [**help**|new|build|serve|gh-deploy] {options}
+  $ mkdocs help
+  mkdocs [help|new|build|serve|gh-deploy] {options}
 ```
 
 ## Project Set Up
