@@ -29,6 +29,7 @@ app.set('view engine', 'hbs');
 app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(require('body-parser').json());
 app.use(require('morgan')('dev'));
+app.use(require('compression')());
 
 
 /**
