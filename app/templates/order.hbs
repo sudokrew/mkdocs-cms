@@ -1,0 +1,23 @@
+<section class="order-view">
+
+  <div id="order-response" class="alert alert-info text-center" role="alert" hidden></div>
+
+  <form id="order-form" action="/order" role="form" data-abide="ajax">
+   <div class="panel-body">
+      <div id="sortable" class="list-group">
+
+        {{#each pages}}
+          {{#each this}}
+          <a class="list-group-item" page="{{@key}}" path="{{this}}" href="#">
+              <i class="fa fa-arrows-v fa-fw"></i> {{@key}}<span class="pull-right text-muted small"><em>{{@key}}</em></span>
+            </a>
+          {{/each}}
+        {{/each}}
+
+      </div>
+      <button  class="btn btn-default btn-block" href="#">Save Changes</button>
+    </div>
+
+
+  </form>
+</section>

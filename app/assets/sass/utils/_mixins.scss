@@ -1,0 +1,27 @@
+// Mixins
+// --------------------------------
+
+// Animation & Keyframes
+@mixin keyframes($name) {
+  @-webkit-keyframes $name { @content; }
+  @-moz-keyframes $name { @content; }
+  @-o-keyframes $name { @content; }
+  @keyframes $name { @content; }
+}
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+// Set a rem font size with pixel fallback
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}

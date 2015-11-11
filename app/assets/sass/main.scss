@@ -1,0 +1,52 @@
+/*!
+ * MkDocs Dashboard
+ * -----------------------
+ */
+
+// Helpers
+// ---------------------------------------------------
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/media-queries';
+@import 'utils/helpers';
+@import 'utils/mixins';
+
+
+// Vendors-extensions
+// ---------------------------------------------------
+// @import 'vendors-extensions/settings';
+
+// Vendors
+// ---------------------------------------------------
+@import 'vendors/bootstrap';
+@import 'vendors/font-awesome';
+
+// Base
+// ---------------------------------------------------
+// @import 'base/typography';
+
+// Components
+// ---------------------------------------------------
+@import 'components/metisMenu';
+@import 'components/simpleMDE';
+
+// Themes
+// ---------------------------------------------------
+@import 'themes/sb-admin-2';
+
+// Layout
+// ---------------------------------------------------
+// @import 'layout/forms';
+
+// Pages
+// ---------------------------------------------------
+@import 'pages/default';
+@import 'pages/index';
+@import 'pages/order';
+@import 'pages/edit';
+@import 'pages/page';
+
+
+// Print
+// ---------------------------------------------------
+// @import 'base/print';

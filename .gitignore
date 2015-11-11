@@ -1,0 +1,6 @@
+.DS_STORE
+node_modules/
+bower_components/
+/mkdocs/site/
+public/
+mkdocs/custom_theme/

@@ -1,0 +1,23 @@
+section.dashboard-view {
+  a {
+    width: 100%;
+  }
+  .version {
+    @include min-breakpoint(screen-md) {
+      max-width: 80px;
+    }
+  }
+  .site-name {
+    @include min-breakpoint(screen-md) {
+      width: 250px !important;
+    }
+  }
+  form {
+    @include min-breakpoint(screen-md) {
+      float: right;
+    }
+    @include max-breakpoint(screen-md) {
+      margin-top: 35px;
+    }
+  }
+}

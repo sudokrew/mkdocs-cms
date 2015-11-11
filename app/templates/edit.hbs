@@ -1,0 +1,10 @@
+<section class="edit-view">
+  <div class="list-group">
+    <form id="form" action="/edit/{{page}}" method="POST" role="form">
+      <div class="editor-value" data="{{{html}}}" hidden></div>
+      <textarea id="{{page}}" name="{{page}}" class="editor"></textarea>
+      <br>
+      <button class="btn btn-default btn-block"  type="submit">Save Changes</button>
+    </form>
+  </div>
+</section>
